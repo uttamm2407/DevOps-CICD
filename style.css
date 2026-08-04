@@ -1,0 +1,40 @@
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    text-align:center;
+}
+
+nav{
+    background:#222;
+    padding:20px;
+}
+
+nav h2{
+    color:white;
+    display:inline;
+}
+
+nav a{
+    color:white;
+    margin-left:30px;
+    text-decoration:none;
+}
+
+.container{
+    margin-top:80px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#007BFF;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.btn:hover{
+    background:#0056b3;
+}
