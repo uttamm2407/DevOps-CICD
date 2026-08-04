@@ -93,16 +93,20 @@ DevOps-CICD
 Ubuntu 24.04
 
 t2.medium
+
 20 GB Storage
+
 Security Group
 <img width="1573" height="495" alt="image" src="https://github.com/user-attachments/assets/fcb1619a-3977-459f-9698-772c9c13f22b" />
 
 # File Permission
 chmod 400 "KEY_NAME.pem"
+
 ssh -i "KEY_NAME.pem" ubuntu@ec2-3-109-54-180.ap-south-1.compute.amazonaws.com
 
 # Update Server
 sudo apt update
+
 sudo apt upgrade -y
 
 
@@ -110,13 +114,18 @@ sudo apt upgrade -y
 
 # Install Docker
 sudo apt install docker.io -y
+
 sudo systemctl enable docker
+
 sudo systemctl start docker
+
 sudo usermod -aG docker ubuntu
+
 newgrp docker
 
 # Install Java
 sudo apt install fontconfig openjdk-21-jre -y
+
 java -version
 
 # Install Jenkins
@@ -128,15 +137,17 @@ https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
 /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 sudo apt update
+
 sudo apt install jenkins -y
+
 sudo systemctl enable jenkins
+
 sudo systemctl start jenkins
 
 
 #  Docker Image
 
-Docker Hub Repository
-uttamm2407/devops-app
+Docker Hub Repository:uttamm2407/devops-app
 
 
 Pull Image
@@ -148,24 +159,24 @@ docker pull uttamm2407/devops-app:latest
 
 # Kubernetes Commands
 
-Deploy Application
+-Deploy Application
 
-command
 kubectl apply -f deployment.yaml
+
 kubectl apply -f service.yaml
 
 
-Check Resources
+-Check Resources
 
-command
 kubectl get deployments
+
 kubectl get pods
+
 kubectl get svc
 
 
-Restart Deployment
+-Restart Deployment
 
-command
 kubectl rollout restart deployment devops-app
 
 
@@ -182,9 +193,8 @@ Pipeline Stages
 
 # 🌐 Application Access
 
-During development with Minikube on AWS EC2, the application was accessed using Kubernetes Port Forwarding.
+-During development with Minikube on AWS EC2, the application was accessed using Kubernetes Port Forwarding.
 
-command
 kubectl port-forward --address 0.0.0.0 service/devops-service 8081:80
 
 
@@ -236,5 +246,4 @@ https://hub.docker.com/u/uttamm2407
 
 
 
-Give this repository a ⭐ on GitHub.
 
