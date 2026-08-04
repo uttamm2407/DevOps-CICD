@@ -89,7 +89,9 @@ DevOps-CICD
 7. Application becomes available on AWS EC2.
 
 # Launch EC2
+
 Ubuntu 24.04
+
 t2.medium
 20 GB Storage
 Security Group
